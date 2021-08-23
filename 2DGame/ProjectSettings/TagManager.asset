@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - DARig
   layers:
   - Default
   - TransparentFX
@@ -55,6 +56,9 @@ TagManager:
     locked: 0
   - name: Wall
     uniqueID: 663087477
+    locked: 0
+  - name: Player
+    uniqueID: 1470729017
     locked: 0
   - name: Objects
     uniqueID: 463294387
