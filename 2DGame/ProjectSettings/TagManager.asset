@@ -66,6 +66,3 @@ TagManager:
   - name: Light
     uniqueID: 1262291127
     locked: 0
-  - name: ObjectInFrontPlayer
-    uniqueID: 1007135025
-    locked: 0
