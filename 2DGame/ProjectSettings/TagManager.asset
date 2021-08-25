@@ -57,6 +57,9 @@ TagManager:
   - name: Player
     uniqueID: 1470729017
     locked: 0
+  - name: ObjectsBehindPlayer
+    uniqueID: 1933485831
+    locked: 0
   - name: PlayerObjectLayer
     uniqueID: 3568883941
     locked: 0
