@@ -8298,6 +8298,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 128850, guid: b6ed95875921a1f4f9c6f17b9f812b11, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 404906, guid: b6ed95875921a1f4f9c6f17b9f812b11, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -23552,7 +23556,7 @@ GameObject:
   - component: {fileID: 1417701590}
   m_Layer: 0
   m_Name: Tablet
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23662,6 +23666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pressEToUse: {fileID: 1161628404}
+  tabletOverlay: {fileID: 0}
 --- !u!1 &1423745176
 GameObject:
   m_ObjectHideFlags: 0

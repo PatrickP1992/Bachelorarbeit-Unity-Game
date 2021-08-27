@@ -6,9 +6,20 @@ using UnityEngine;
 public class TabletController : MonoBehaviour
 {
     public GameObject pressEToUse;
-    public Canvas tabletOverlay;
-    
+    public GameObject tabletOverlay;
 
+    private bool canBeActivated;
+
+    private void FixedUpdate()
+    {
+        if (canBeActivated)
+        {
+            if (Input.GetKey((KeyCode.E)))
+            {
+                tabletOverlay.SetActive(true);
+            }
+        }
+    }
 
     private void ShowPressE()
     {
@@ -22,11 +33,19 @@ public class TabletController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D trigger)
     {
-        ShowPressE();
+        if (trigger.gameObject.tag == "Player")
+        { 
+            ShowPressE();
+            canBeActivated = true;
+        }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    private void OnTriggerExit2D(Collider2D trigger)
     {
-        HidePressE();
+        if (trigger.gameObject.tag == "Player")
+        { 
+            HidePressE();
+            canBeActivated = false;
+        }
     }
 }
