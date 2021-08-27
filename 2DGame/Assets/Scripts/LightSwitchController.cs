@@ -11,11 +11,11 @@ public class LightSwitchController : MonoBehaviour
     private bool canBeActivated;
     
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (canBeActivated)
         {
-            if (Input.GetKey((KeyCode.E)))
+            if (Input.GetKeyUp(KeyCode.E))
             {
                 if (islighting)
                 {

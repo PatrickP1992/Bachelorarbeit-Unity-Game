@@ -16006,8 +16006,8 @@ GameObject:
   - component: {fileID: 965120126}
   - component: {fileID: 965120128}
   - component: {fileID: 965120127}
-  - component: {fileID: 965120130}
   - component: {fileID: 965120129}
+  - component: {fileID: 965120130}
   m_Layer: 0
   m_Name: Light_Switch_Kitchen
   m_TagString: Untagged
@@ -16115,8 +16115,8 @@ MonoBehaviour:
   pressEToUse: {fileID: 1714425171}
   light: {fileID: 558481419}
   islighting: 1
---- !u!61 &965120130
-BoxCollider2D:
+--- !u!58 &965120130
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -16128,19 +16128,9 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.317217, y: -0.7127514}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.79, y: 1.53}
-    newSize: {x: 0.79, y: 1.53}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0.5, y: -2.5}
   serializedVersion: 2
-  m_Size: {x: 1.9555008, y: 2.9555025}
-  m_EdgeRadius: 0
+  m_Radius: 2
 --- !u!1 &983771444
 GameObject:
   m_ObjectHideFlags: 0
@@ -23671,8 +23661,8 @@ Transform:
   m_Father: {fileID: 1067519208}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1417701590
-BoxCollider2D:
+--- !u!58 &1417701590
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -23684,19 +23674,9 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.287059, y: -0.83203864}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.79, y: 1.53}
-    newSize: {x: 0.79, y: 1.53}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0.5, y: -2.5}
   serializedVersion: 2
-  m_Size: {x: 3.3641179, y: 3.1940775}
-  m_EdgeRadius: 0
+  m_Radius: 2
 --- !u!114 &1417701591
 MonoBehaviour:
   m_ObjectHideFlags: 0

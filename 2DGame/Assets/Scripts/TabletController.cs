@@ -10,11 +10,11 @@ public class TabletController : MonoBehaviour
 
     private bool canBeActivated;
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (canBeActivated)
         {
-            if (Input.GetKey((KeyCode.E)))
+            if (Input.GetKeyUp((KeyCode.E)))
             {
                 tabletOverlay.SetActive(true);
             }
