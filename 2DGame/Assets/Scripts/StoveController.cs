@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LightSwitchController : MonoBehaviour
+public class StoveController : MonoBehaviour
 {
     public GameObject pressEToUse;
-    public GameObject light;
-    public bool islighting;
+    public GameObject fryingPan;
+    public bool isCooking;
     public Animator animator;
     private bool canBeActivated;
     
@@ -17,17 +17,17 @@ public class LightSwitchController : MonoBehaviour
         {
             if (Input.GetKeyUp(KeyCode.E))
             {
-                if (islighting)
+                if (isCooking)
                 {
-                    light.SetActive(false);
-                    islighting = false;
-                    animator.SetBool("switchOn", false);
+                    fryingPan.SetActive(false);
+                    isCooking = false;
+                    animator.SetBool("stoveOn", false);
                 }
                 else
                 {
-                    light.SetActive(true);
-                    islighting = true;
-                    animator.SetBool("switchOn", true);
+                    fryingPan.SetActive(true);
+                    isCooking = true;
+                    animator.SetBool("stoveOn", true);
                 }
             }
         }
