@@ -21,4 +21,16 @@ public class PhoneOverlayController : MonoBehaviour
             panel.SetActive(true);
         }
     }
+
+    public void PhoneButton()
+    {
+        if (panel.active)
+        {
+            ClosePhonePanel();
+        }
+        else if (!panel.active)
+        {
+            OpenPhonePanel();
+        }
+    }
 }

@@ -8402,7 +8402,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 560830597}
         m_TargetAssemblyTypeName: PhoneOverlayController, Assembly-CSharp
-        m_MethodName: OpenPhonePanel
+        m_MethodName: PhoneButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12320,7 +12320,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 67, y: 230}
+  m_AnchoredPosition: {x: 65.6, y: 199.2}
   m_SizeDelta: {x: 37.6953, y: 37.4124}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &871949544
@@ -13759,7 +13759,7 @@ RectTransform:
   m_GameObject: {fileID: 933934769}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 560830593}
   m_RootOrder: 0
@@ -18698,7 +18698,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 278, y: 176}
+  m_AnchoredPosition: {x: 270.5, y: 155.5}
   m_SizeDelta: {x: 37.6953, y: 37.4124}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1327404471
