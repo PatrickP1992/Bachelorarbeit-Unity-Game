@@ -17,18 +17,7 @@ public class LightSwitchController : MonoBehaviour
         {
             if (Input.GetKeyUp(KeyCode.E))
             {
-                if (islighting)
-                {
-                    light.SetActive(false);
-                    islighting = false;
-                    animator.SetBool("switchOn", false);
-                }
-                else
-                {
-                    light.SetActive(true);
-                    islighting = true;
-                    animator.SetBool("switchOn", true);
-                }
+                ChangeLightState();
             }
         }
     }
@@ -58,6 +47,22 @@ public class LightSwitchController : MonoBehaviour
         { 
             HidePressE();
             canBeActivated = false;
+        }
+    }
+
+    public void ChangeLightState()
+    {
+        if (islighting)
+        {
+            light.SetActive(false);
+            islighting = false;
+            animator.SetBool("switchOn", false);
+        }
+        else
+        {
+            light.SetActive(true);
+            islighting = true;
+            animator.SetBool("switchOn", true);
         }
     }
 }

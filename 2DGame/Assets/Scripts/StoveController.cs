@@ -17,18 +17,7 @@ public class StoveController : MonoBehaviour
         {
             if (Input.GetKeyUp(KeyCode.E))
             {
-                if (isCooking)
-                {
-                    fryingPan.SetActive(false);
-                    isCooking = false;
-                    animator.SetBool("stoveOn", false);
-                }
-                else
-                {
-                    fryingPan.SetActive(true);
-                    isCooking = true;
-                    animator.SetBool("stoveOn", true);
-                }
+                ChangeStoveState();
             }
         }
     }
@@ -58,6 +47,23 @@ public class StoveController : MonoBehaviour
         { 
             HidePressE();
             canBeActivated = false;
+        }
+    }
+
+
+    public void ChangeStoveState()
+    {
+        if (isCooking)
+        {
+            fryingPan.SetActive(false);
+            isCooking = false;
+            animator.SetBool("stoveOn", false);
+        }
+        else
+        {
+            fryingPan.SetActive(true);
+            isCooking = true;
+            animator.SetBool("stoveOn", true);
         }
     }
 }
