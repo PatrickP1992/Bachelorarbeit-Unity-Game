@@ -4596,6 +4596,7 @@ GameObject:
   - component: {fileID: 243438456}
   - component: {fileID: 243438455}
   - component: {fileID: 243438454}
+  - component: {fileID: 243438457}
   m_Layer: 5
   m_Name: LightButton
   m_TagString: Untagged
@@ -4716,6 +4717,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 243438452}
   m_CullTransparentMesh: 1
+--- !u!114 &243438457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243438452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3a3aa72a48f0414c94dd8737fb43ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 243438455}
+  active: {fileID: 21300000, guid: d3b4b5dd2bfb67641b403342e8526ad8, type: 3}
+  inactive: {fileID: 21300000, guid: 050b243aaae7b3549a543b683a533d74, type: 3}
+  obj: {fileID: 89934663}
 --- !u!1 &250096162
 GameObject:
   m_ObjectHideFlags: 0
@@ -7787,7 +7804,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &393986890
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14309,6 +14326,7 @@ GameObject:
   - component: {fileID: 720842468}
   - component: {fileID: 720842467}
   - component: {fileID: 720842466}
+  - component: {fileID: 720842469}
   m_Layer: 5
   m_Name: LightButton
   m_TagString: Untagged
@@ -14378,7 +14396,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 720842467}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 492779671}
+        m_TargetAssemblyTypeName: LightSwitchController, Assembly-CSharp
+        m_MethodName: ChangeLightState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &720842467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14417,6 +14447,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 720842464}
   m_CullTransparentMesh: 1
+--- !u!114 &720842469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720842464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3a3aa72a48f0414c94dd8737fb43ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 720842467}
+  active: {fileID: 21300000, guid: d3b4b5dd2bfb67641b403342e8526ad8, type: 3}
+  inactive: {fileID: 21300000, guid: 050b243aaae7b3549a543b683a533d74, type: 3}
+  obj: {fileID: 1529786054}
 --- !u!1 &722452312
 GameObject:
   m_ObjectHideFlags: 0
@@ -14429,6 +14475,7 @@ GameObject:
   - component: {fileID: 722452316}
   - component: {fileID: 722452315}
   - component: {fileID: 722452314}
+  - component: {fileID: 722452317}
   m_Layer: 5
   m_Name: LightButton
   m_TagString: Untagged
@@ -14498,7 +14545,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 722452315}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 85192441}
+        m_TargetAssemblyTypeName: LightSwitchController, Assembly-CSharp
+        m_MethodName: ChangeLightState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &722452315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14537,6 +14596,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 722452312}
   m_CullTransparentMesh: 1
+--- !u!114 &722452317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722452312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3a3aa72a48f0414c94dd8737fb43ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 722452315}
+  active: {fileID: 21300000, guid: d3b4b5dd2bfb67641b403342e8526ad8, type: 3}
+  inactive: {fileID: 21300000, guid: 050b243aaae7b3549a543b683a533d74, type: 3}
+  obj: {fileID: 277404312}
 --- !u!1 &730601635
 GameObject:
   m_ObjectHideFlags: 0
@@ -17965,6 +18040,7 @@ GameObject:
   - component: {fileID: 909827987}
   - component: {fileID: 909827986}
   - component: {fileID: 909827985}
+  - component: {fileID: 909827988}
   m_Layer: 5
   m_Name: LightButton
   m_TagString: Untagged
@@ -18085,6 +18161,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 909827983}
   m_CullTransparentMesh: 1
+--- !u!114 &909827988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909827983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3a3aa72a48f0414c94dd8737fb43ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 909827986}
+  active: {fileID: 21300000, guid: d3b4b5dd2bfb67641b403342e8526ad8, type: 3}
+  inactive: {fileID: 21300000, guid: 050b243aaae7b3549a543b683a533d74, type: 3}
+  obj: {fileID: 277404312}
 --- !u!1 &914138904
 GameObject:
   m_ObjectHideFlags: 0
@@ -22463,6 +22555,7 @@ GameObject:
   - component: {fileID: 1200008271}
   - component: {fileID: 1200008270}
   - component: {fileID: 1200008269}
+  - component: {fileID: 1200008272}
   m_Layer: 5
   m_Name: LightButton
   m_TagString: Untagged
@@ -22532,7 +22625,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1200008270}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 965120129}
+        m_TargetAssemblyTypeName: LightSwitchController, Assembly-CSharp
+        m_MethodName: ChangeLightState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1200008270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22571,6 +22676,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1200008267}
   m_CullTransparentMesh: 1
+--- !u!114 &1200008272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200008267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3a3aa72a48f0414c94dd8737fb43ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 1200008270}
+  active: {fileID: 21300000, guid: d3b4b5dd2bfb67641b403342e8526ad8, type: 3}
+  inactive: {fileID: 21300000, guid: 050b243aaae7b3549a543b683a533d74, type: 3}
+  obj: {fileID: 558481419}
 --- !u!1 &1208418181
 GameObject:
   m_ObjectHideFlags: 0
@@ -30122,6 +30243,7 @@ GameObject:
   - component: {fileID: 1640134374}
   - component: {fileID: 1640134373}
   - component: {fileID: 1640134372}
+  - component: {fileID: 1640134375}
   m_Layer: 5
   m_Name: LightButton
   m_TagString: Untagged
@@ -30242,6 +30364,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1640134370}
   m_CullTransparentMesh: 1
+--- !u!114 &1640134375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640134370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3a3aa72a48f0414c94dd8737fb43ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 1640134373}
+  active: {fileID: 21300000, guid: d3b4b5dd2bfb67641b403342e8526ad8, type: 3}
+  inactive: {fileID: 21300000, guid: 050b243aaae7b3549a543b683a533d74, type: 3}
+  obj: {fileID: 558481419}
 --- !u!1 &1644447423
 GameObject:
   m_ObjectHideFlags: 0
@@ -31834,6 +31972,7 @@ GameObject:
   - component: {fileID: 1757482360}
   - component: {fileID: 1757482359}
   - component: {fileID: 1757482358}
+  - component: {fileID: 1757482361}
   m_Layer: 5
   m_Name: StoveButton
   m_TagString: Untagged
@@ -31903,7 +32042,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1757482359}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1735549230}
+        m_TargetAssemblyTypeName: StoveController, Assembly-CSharp
+        m_MethodName: ChangeStoveState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1757482359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31942,6 +32093,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1757482356}
   m_CullTransparentMesh: 1
+--- !u!114 &1757482361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757482356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3a3aa72a48f0414c94dd8737fb43ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 1757482359}
+  active: {fileID: 21300000, guid: 2a580fb3f03816f43aaf407e0668d45f, type: 3}
+  inactive: {fileID: 21300000, guid: eb339dabf9607df44a5f579f72c18db0, type: 3}
+  obj: {fileID: 584792266}
 --- !u!1 &1762065739
 GameObject:
   m_ObjectHideFlags: 0
@@ -32074,6 +32241,7 @@ GameObject:
   - component: {fileID: 1763791492}
   - component: {fileID: 1763791491}
   - component: {fileID: 1763791490}
+  - component: {fileID: 1763791493}
   m_Layer: 5
   m_Name: StoveButton
   m_TagString: Untagged
@@ -32194,6 +32362,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1763791488}
   m_CullTransparentMesh: 1
+--- !u!114 &1763791493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763791488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3a3aa72a48f0414c94dd8737fb43ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 1763791491}
+  active: {fileID: 21300000, guid: 2a580fb3f03816f43aaf407e0668d45f, type: 3}
+  inactive: {fileID: 21300000, guid: eb339dabf9607df44a5f579f72c18db0, type: 3}
+  obj: {fileID: 584792266}
 --- !u!1 &1767351132
 GameObject:
   m_ObjectHideFlags: 0
@@ -33082,6 +33266,7 @@ GameObject:
   - component: {fileID: 1821921055}
   - component: {fileID: 1821921054}
   - component: {fileID: 1821921053}
+  - component: {fileID: 1821921056}
   m_Layer: 5
   m_Name: LightButton
   m_TagString: Untagged
@@ -33151,7 +33336,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1821921054}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1862295817}
+        m_TargetAssemblyTypeName: LightSwitchController, Assembly-CSharp
+        m_MethodName: ChangeLightState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1821921054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33190,6 +33387,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1821921051}
   m_CullTransparentMesh: 1
+--- !u!114 &1821921056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821921051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3a3aa72a48f0414c94dd8737fb43ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 1821921054}
+  active: {fileID: 21300000, guid: d3b4b5dd2bfb67641b403342e8526ad8, type: 3}
+  inactive: {fileID: 21300000, guid: 050b243aaae7b3549a543b683a533d74, type: 3}
+  obj: {fileID: 89934663}
 --- !u!1 &1824759820
 GameObject:
   m_ObjectHideFlags: 0
@@ -35573,6 +35786,7 @@ GameObject:
   - component: {fileID: 1939521765}
   - component: {fileID: 1939521764}
   - component: {fileID: 1939521763}
+  - component: {fileID: 1939521766}
   m_Layer: 5
   m_Name: LightButton
   m_TagString: Untagged
@@ -35693,6 +35907,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1939521761}
   m_CullTransparentMesh: 1
+--- !u!114 &1939521766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939521761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3a3aa72a48f0414c94dd8737fb43ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 1939521764}
+  active: {fileID: 21300000, guid: d3b4b5dd2bfb67641b403342e8526ad8, type: 3}
+  inactive: {fileID: 21300000, guid: 050b243aaae7b3549a543b683a533d74, type: 3}
+  obj: {fileID: 1529786054}
 --- !u!1 &1948241959
 GameObject:
   m_ObjectHideFlags: 0
