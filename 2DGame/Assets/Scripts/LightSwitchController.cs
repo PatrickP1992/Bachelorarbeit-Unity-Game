@@ -54,15 +54,36 @@ public class LightSwitchController : MonoBehaviour
     {
         if (islighting)
         {
-            light.SetActive(false);
-            islighting = false;
-            animator.SetBool("switchOn", false);
+           TurnLightOff();
         }
         else
+        {
+            TurnLightOn();
+        }
+    }
+
+    public void TurnLightOn()
+    {
+        if(!islighting)
         {
             light.SetActive(true);
             islighting = true;
             animator.SetBool("switchOn", true);
         }
+    }
+
+    public void TurnLightOff()
+    {
+        if (islighting)
+        {
+            light.SetActive(false);
+            islighting = false;
+            animator.SetBool("switchOn", false);
+        }
+    }
+
+    public bool GetIslighting()
+    {
+        return islighting;
     }
 }

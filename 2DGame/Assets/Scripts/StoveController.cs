@@ -55,15 +55,36 @@ public class StoveController : MonoBehaviour
     {
         if (isCooking)
         {
-            fryingPan.SetActive(false);
-            isCooking = false;
-            animator.SetBool("stoveOn", false);
+            TurnStoveOff();
         }
         else
+        {
+           TurnStoveOn();
+        }
+    }
+
+    public void TurnStoveOn()
+    {
+        if (!isCooking)
         {
             fryingPan.SetActive(true);
             isCooking = true;
             animator.SetBool("stoveOn", true);
         }
+    }
+
+    public void TurnStoveOff()
+    {
+        if (isCooking)
+        {
+            fryingPan.SetActive(false);
+            isCooking = false;
+            animator.SetBool("stoveOn", false);
+        }
+    }
+    
+    public bool GetIsCooking()
+    {
+        return isCooking;
     }
 }
