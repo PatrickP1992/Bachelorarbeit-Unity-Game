@@ -15171,6 +15171,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 765757683}
+  - component: {fileID: 765757684}
   m_Layer: 0
   m_Name: ScenarioController
   m_TagString: Untagged
@@ -15192,6 +15193,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &765757684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765757682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd09baaa599db5c459e7d6d1d45f7c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questPopupText: {fileID: 1871275126}
+  questInfoText: {fileID: 801817762}
+  smartPointsText: {fileID: 1894149947}
+  livingroomLight: {fileID: 85192441}
+  bedroomLight: {fileID: 492779671}
+  kitchenLight: {fileID: 965120129}
+  bathroomLight: {fileID: 1862295817}
+  kitchenStove: {fileID: 1735549230}
 --- !u!1 &768832188
 GameObject:
   m_ObjectHideFlags: 0
@@ -23877,7 +23898,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1264764958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34589,7 +34610,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1871275124
 RectTransform:
   m_ObjectHideFlags: 0
@@ -34605,9 +34626,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5107527, y: 1}
-  m_AnchoredPosition: {x: 0, y: -235.67}
-  m_SizeDelta: {x: 286.7824, y: -471.3314}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 307.7824, y: 68.66861}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1871275125
 MonoBehaviour:
@@ -35007,7 +35028,7 @@ GameObject:
   - component: {fileID: 1894149947}
   - component: {fileID: 1894149946}
   m_Layer: 5
-  m_Name: SmartPointsText (1)
+  m_Name: SmartPointsValueText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
