@@ -27,8 +27,11 @@ public class ScenarioController : MonoBehaviour
         bathroomLight.TurnLightOff();
 
         questPopupText.enabled = false;
-        questInfoText.enabled = false;
+        questInfoText.enabled = true;
         smartPointsText.text = "0";
+        
+        ShowPopupText("Gehe zur Arbeit");
+        SetQuestInfoText("Gehe zur Arbeit");
     }
 
     // Update is called once per frame
@@ -45,5 +48,31 @@ public class ScenarioController : MonoBehaviour
     public int GetSmartHomeLevel()
     {
         return this._smartHomeLevel;
+    }
+
+
+    public void ShowPopupText(string text)
+    {
+        int duration = 10;
+
+        questPopupText.text = text;
+        EnableQuestPopupText();
+        
+        Invoke("DisableQuestPopupText", duration);//invoke after duration seconds
+    }
+
+    public void SetQuestInfoText(string text)
+    {
+        questInfoText.text = text;
+    }
+
+    public void EnableQuestPopupText()
+    {
+        questPopupText.enabled = true;
+    }
+
+    public void DisableQuestPopupText()
+    {
+        questPopupText.enabled = false;
     }
 }
