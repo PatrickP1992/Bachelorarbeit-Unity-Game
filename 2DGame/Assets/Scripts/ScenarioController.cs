@@ -15,7 +15,12 @@ public class ScenarioController : MonoBehaviour
     public LightSwitchController bathroomLight;
     public StoveController kitchenStove;
     private int _smartHomeLevel = 0;
-    
+
+    //Quest booleans
+    public bool startQuests;
+    public bool bathQuestDone;
+    public bool livingQuestDone;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +34,8 @@ public class ScenarioController : MonoBehaviour
         questPopupText.enabled = false;
         questInfoText.enabled = true;
         smartPointsText.text = "0";
-        
+
+        startQuests = true;
         ShowPopupText("Gehe zur Arbeit");
         SetQuestInfoText("Gehe zur Arbeit");
     }

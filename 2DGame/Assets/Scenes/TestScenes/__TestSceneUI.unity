@@ -1945,7 +1945,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 85192438}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.64, y: 2.23, z: 0}
+  m_LocalPosition: {x: -6.96, y: 3.73, z: 0}
   m_LocalScale: {x: 0.19999999, y: 0.19999999, z: 0.19999999}
   m_Children:
   - {fileID: 608822683}
@@ -4266,6 +4266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 196550756}
   - component: {fileID: 196550757}
+  - component: {fileID: 196550758}
   m_Layer: 0
   m_Name: wallHalf_SW (8)
   m_TagString: Untagged
@@ -4338,6 +4339,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &196550758
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196550755}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.42, y: 1.27}
+    newSize: {x: 0.42, y: 1.27}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.19096594, y: 0.3438455}
+      - {x: -0.60592407, y: 0.9011933}
+      - {x: -1.445714, y: 1.4917644}
+      - {x: -1.632031, y: 1.1263525}
+      - {x: -1.642031, y: 1.1368256}
+      - {x: -1.7374992, y: 0.7210163}
+      - {x: 0.089999996, y: -0.635}
+      - {x: 0.21, y: -0.635}
+      - {x: 0.2970201, y: 0.29335687}
+      - {x: 0.1791223, y: 0.3366836}
 --- !u!1 &202676189
 GameObject:
   m_ObjectHideFlags: 0
@@ -5372,7 +5408,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 277404312}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.27, y: 2.84, z: 0}
+  m_LocalPosition: {x: 12.86, y: -3.54, z: 0}
   m_LocalScale: {x: 4.794945, y: 2.9889474, z: 5}
   m_Children: []
   m_Father: {fileID: 85192439}
@@ -11184,6 +11220,7 @@ GameObject:
   - component: {fileID: 536199248}
   - component: {fileID: 536199250}
   - component: {fileID: 536199249}
+  - component: {fileID: 536199251}
   m_Layer: 5
   m_Name: QuestlogText
   m_TagString: Untagged
@@ -11207,7 +11244,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0.5107527, y: 1}
-  m_AnchoredPosition: {x: -341.18256, y: 214.75708}
+  m_AnchoredPosition: {x: -326, y: 214.76}
   m_SizeDelta: {x: -682.3699, y: -429.5091}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &536199249
@@ -11223,7 +11260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11231,9 +11268,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: cdf537d55c3c1e1458fcac1145121524, type: 3}
     m_FontSize: 60
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 60
@@ -11243,7 +11280,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Questlog:'
+  m_Text: 'Quests:'
 --- !u!222 &536199250
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11252,6 +11289,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 536199247}
   m_CullTransparentMesh: 1
+--- !u!114 &536199251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536199247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &544469478
 GameObject:
   m_ObjectHideFlags: 0
@@ -15213,6 +15265,9 @@ MonoBehaviour:
   kitchenLight: {fileID: 965120129}
   bathroomLight: {fileID: 1862295817}
   kitchenStove: {fileID: 1735549230}
+  startQuests: 0
+  bathQuestDone: 0
+  livingQuestDone: 0
 --- !u!1 &768832188
 GameObject:
   m_ObjectHideFlags: 0
@@ -15798,6 +15853,7 @@ GameObject:
   - component: {fileID: 801817761}
   - component: {fileID: 801817763}
   - component: {fileID: 801817762}
+  - component: {fileID: 801817764}
   m_Layer: 5
   m_Name: QuestInfoText
   m_TagString: Untagged
@@ -15821,8 +15877,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -810.86, y: 321.1679}
-  m_SizeDelta: {x: 298.28, y: 216.6858}
+  m_AnchoredPosition: {x: -640.65, y: 350.93}
+  m_SizeDelta: {x: 608.3396, y: 157.1732}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &801817762
 MonoBehaviour:
@@ -15837,7 +15893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.8396226, g: 0.33584902, b: 0.33584902, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -15845,8 +15901,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_Font: {fileID: 12800000, guid: cdf537d55c3c1e1458fcac1145121524, type: 3}
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -15866,6 +15922,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 801817760}
   m_CullTransparentMesh: 1
+--- !u!114 &801817764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801817760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &802159363
 GameObject:
   m_ObjectHideFlags: 0
@@ -26455,6 +26526,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1414141006}
   - component: {fileID: 1414141007}
+  - component: {fileID: 1414141008}
+  - component: {fileID: 1414141009}
   m_Layer: 0
   m_Name: doorwayFront_NW
   m_TagString: Untagged
@@ -26527,6 +26600,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &1414141008
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414141005}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.43, y: 1.07}
+    newSize: {x: 0.43, y: 1.07}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.131912, y: 0.54436195}
+      - {x: -0.18403913, y: 0.57353663}
+      - {x: -0.20849669, y: 0.47927693}
+      - {x: -0.21499999, y: -0.325}
+      - {x: 0.044999998, y: -0.53499997}
+      - {x: 0.21500002, y: -0.53499997}
+      - {x: 0.21499999, y: -0.53499997}
+      - {x: 0.21499999, y: -0.045342445}
+      - {x: 0.20960349, y: 0.2896933}
+--- !u!114 &1414141009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414141005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7392ec7e618d2b34d92629a63820c8bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenario: {fileID: 765757684}
 --- !u!1 &1416814142
 GameObject:
   m_ObjectHideFlags: 0
@@ -26687,7 +26807,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1417701587}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.952, y: 0.734, z: 0.64438564}
+  m_LocalPosition: {x: -2.46, y: 2.44, z: 0.64438564}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
   - {fileID: 1161628405}
@@ -34604,6 +34724,7 @@ GameObject:
   - component: {fileID: 1871275127}
   - component: {fileID: 1871275126}
   - component: {fileID: 1871275125}
+  - component: {fileID: 1871275128}
   m_Layer: 5
   m_Name: QuestPopupText
   m_TagString: Untagged
@@ -34658,7 +34779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.07232696, b: 0.07232696, a: 1}
+  m_Color: {r: 0.8392157, g: 0.3372549, b: 0.3372549, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -34666,7 +34787,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: cdf537d55c3c1e1458fcac1145121524, type: 3}
     m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
@@ -34687,6 +34808,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1871275123}
   m_CullTransparentMesh: 1
+--- !u!114 &1871275128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871275123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1879465768
 GameObject:
   m_ObjectHideFlags: 0
