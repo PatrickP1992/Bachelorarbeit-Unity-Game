@@ -88,4 +88,9 @@ public class LightSwitchController : QuestObject
     {
         return islighting;
     }
+
+    public override void SetObjectActive()
+    {
+        TurnLightOn();
+    }
 }

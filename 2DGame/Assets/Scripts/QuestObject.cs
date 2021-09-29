@@ -15,4 +15,9 @@ public class QuestObject : MonoBehaviour
    {
       return _inactive;
    }
+
+   public virtual void SetObjectActive()
+   {
+      
+   }
 }

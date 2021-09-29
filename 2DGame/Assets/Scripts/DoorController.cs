@@ -7,6 +7,7 @@ public class DoorController : MonoBehaviour
 
     public ScenarioController scenario;
     private bool canBeActivated;
+    private bool firstQuest = true;
 
     private void OnTriggerEnter2D(Collider2D trigger)
     {
@@ -33,7 +34,16 @@ public class DoorController : MonoBehaviour
         {
             if (Input.GetKeyUp(KeyCode.E))
             {
-                scenario.GenerateQuest();
+                if (firstQuest)
+                {
+                    scenario.GenerateQuest();
+                    firstQuest = false;
+                }
+                else
+                {
+                    scenario.GenerateRandomQuest();
+                }
+                
             }
         }
     }

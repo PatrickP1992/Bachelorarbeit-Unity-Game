@@ -89,4 +89,9 @@ public class StoveController : QuestObject
     {
         return isCooking;
     }
+    
+    public override void SetObjectActive()
+    {
+        TurnStoveOn();
+    }
 }

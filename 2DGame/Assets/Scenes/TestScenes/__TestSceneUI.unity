@@ -15265,9 +15265,6 @@ MonoBehaviour:
   kitchenLight: {fileID: 965120129}
   bathroomLight: {fileID: 1862295817}
   kitchenStove: {fileID: 1735549230}
-  startQuests: 0
-  bathQuestDone: 0
-  livingQuestDone: 0
 --- !u!1 &768832188
 GameObject:
   m_ObjectHideFlags: 0
@@ -26625,15 +26622,15 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.131912, y: 0.54436195}
-      - {x: -0.18403913, y: 0.57353663}
+    - - {x: 0.3152954, y: 0.5900298}
+      - {x: -0.16806763, y: 0.9160452}
       - {x: -0.20849669, y: 0.47927693}
       - {x: -0.21499999, y: -0.325}
       - {x: 0.044999998, y: -0.53499997}
       - {x: 0.21500002, y: -0.53499997}
       - {x: 0.21499999, y: -0.53499997}
       - {x: 0.21499999, y: -0.045342445}
-      - {x: 0.20960349, y: 0.2896933}
+      - {x: 0.5343608, y: 0.3810289}
 --- !u!114 &1414141009
 MonoBehaviour:
   m_ObjectHideFlags: 0

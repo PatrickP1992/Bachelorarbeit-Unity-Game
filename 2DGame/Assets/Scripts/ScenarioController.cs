@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class ScenarioController : MonoBehaviour
 {
     public Text questPopupText;
@@ -50,6 +51,18 @@ public class ScenarioController : MonoBehaviour
     {
         UpdateQuest();
     }
+
+    public void GenerateRandomQuest()
+    {
+        int changeAmount = Random.Range(1, _questObjects.Count);
+
+        for (int i = 0; i < changeAmount; i++)
+        {
+            int pos = Random.Range(0, _questObjects.Count);
+            _questObjects[pos].SetObjectActive();
+        }
+        GenerateQuest();
+    }
     
     public void GenerateQuest()
     {
@@ -90,7 +103,7 @@ public class ScenarioController : MonoBehaviour
             currentPoints = currentPoints + points;
             DisplayPoints();
             ShowPopupText("Du hast die Quest erfolgreich abgeschlossen",2);
-            //GenerateQuest();
+            SetQuestInfoText("Gehe zur Arbeit");
         }
         else if (status>0) // if Objects are completed
         {
