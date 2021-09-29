@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LightSwitchController : MonoBehaviour
+public class LightSwitchController : QuestObject
 {
     public GameObject pressEToUse;
     public GameObject light;
@@ -67,6 +67,7 @@ public class LightSwitchController : MonoBehaviour
         if(!islighting)
         {
             light.SetActive(true);
+            SetInactive(false);
             islighting = true;
             animator.SetBool("switchOn", true);
         }
@@ -78,6 +79,7 @@ public class LightSwitchController : MonoBehaviour
         {
             light.SetActive(false);
             islighting = false;
+            SetInactive(true);
             animator.SetBool("switchOn", false);
         }
     }

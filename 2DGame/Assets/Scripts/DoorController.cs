@@ -33,30 +33,7 @@ public class DoorController : MonoBehaviour
         {
             if (Input.GetKeyUp(KeyCode.E))
             {
-                if (scenario.startQuests)
-                {
-                    scenario.bathroomLight.TurnLightOn();
-                    scenario.bathQuestDone = false;
-                    scenario.ShowPopupText("Schalte das Licht im Bad aus");
-                    scenario.SetQuestInfoText("Schalte das Licht im Bad aus");
-                }
-                if (scenario.bathQuestDone)
-                {
-                    scenario.livingroomLight.TurnLightOn();
-                    scenario.livingQuestDone = false;
-                    scenario.ShowPopupText("Schalte das Licht im Wohnzimmer aus");
-                    scenario.SetQuestInfoText("Schalte das Licht im Wohnzimmer aus");
-                }
-            }
-        }
-        if (scenario.startQuests)
-        {
-            if (!scenario.bathroomLight.GetIslighting())
-            {
-                scenario.startQuests = false;
-                scenario.bathQuestDone = true;
-                scenario.ShowPopupText("Gehe zur Arbeit");
-                scenario.SetQuestInfoText("Gehe zur Arbeit");
+                scenario.GenerateQuest();
             }
         }
     }

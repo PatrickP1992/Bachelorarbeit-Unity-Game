@@ -15,11 +15,9 @@ public class ScenarioController : MonoBehaviour
     public LightSwitchController bathroomLight;
     public StoveController kitchenStove;
     private int _smartHomeLevel = 0;
-
-    //Quest booleans
-    public bool startQuests;
-    public bool bathQuestDone;
-    public bool livingQuestDone;
+    private Quest currentQuest;
+    private int currentPoints;
+    private List<QuestObject> _questObjects = new List<QuestObject>();
 
     // Start is called before the first frame update
     void Start()
@@ -34,15 +32,74 @@ public class ScenarioController : MonoBehaviour
         questPopupText.enabled = false;
         questInfoText.enabled = true;
         smartPointsText.text = "0";
+        currentPoints = int.Parse(smartPointsText.text);
+        
+        _questObjects.Add(livingroomLight);
+        _questObjects.Add(bathroomLight);
+        _questObjects.Add(kitchenLight);
+        _questObjects.Add(bathroomLight);
+        _questObjects.Add(kitchenStove);
 
-        startQuests = true;
-        ShowPopupText("Gehe zur Arbeit");
+        currentQuest = new Quest("Gehe zur Arbeit");
+        ShowPopupText("Gehe zur Arbeit" ,2);
         SetQuestInfoText("Gehe zur Arbeit");
     }
 
     // Update is called once per frame
     void Update()
     {
+        UpdateQuest();
+    }
+    
+    public void GenerateQuest()
+    {
+        List<QuestObject> objForQuest = new List<QuestObject>();
+        int n = 0;
+        foreach (var q in _questObjects)
+        {
+            if (!q.GetInactive())
+            {
+                objForQuest.Add(q);
+                n++;
+            }
+        }
+
+        if (n>0)
+        {
+            currentQuest = new Quest(objForQuest, "Vor dem Verlassen muss alles ausgeschalten werden");
+            ShowPopupText("Vor dem Verlassen muss alles ausgeschalten werden",2);
+            SetQuestInfoText("Vor dem Verlassen muss alles ausgeschalten werden");
+        }
+        else
+        {
+            currentQuest = new Quest("Gehe zur Arbeit");
+            ShowPopupText("Gehe zur Arbeit",2);
+            SetQuestInfoText("Gehe zur Arbeit");
+        }
+    }
+
+    public void UpdateQuest()
+    {
+        int points = 0;
+        int status = currentQuest.CheckQuestStatus();
+        // If the Quest is done
+        if (status == 0)
+        {
+            // Calculate Points
+            points = 50;
+            currentPoints = currentPoints + points;
+            DisplayPoints();
+            ShowPopupText("Du hast die Quest erfolgreich abgeschlossen",2);
+            //GenerateQuest();
+        }
+        else if (status>0) // if Objects are completed
+        {
+            // Calculate Points
+            points = status * 5;
+            currentPoints = currentPoints + points;
+            DisplayPoints();
+            ShowPopupText("Du hast ein Gerät ausgeschalten, es sin aber noch weitere an",2);
+        }
         
     }
 
@@ -55,16 +112,15 @@ public class ScenarioController : MonoBehaviour
     {
         return this._smartHomeLevel;
     }
+    
 
-
-    public void ShowPopupText(string text)
+    // ReSharper disable Unity.PerformanceAnalysis
+    public void ShowPopupText(string text, int seconds)
     {
-        int duration = 10;
-
         questPopupText.text = text;
         EnableQuestPopupText();
         
-        Invoke("DisableQuestPopupText", duration);//invoke after duration seconds
+        Invoke("DisableQuestPopupText",seconds);//invoke after seconds
     }
 
     public void SetQuestInfoText(string text)
@@ -80,5 +136,10 @@ public class ScenarioController : MonoBehaviour
     public void DisableQuestPopupText()
     {
         questPopupText.enabled = false;
+    }
+
+    private void DisplayPoints()
+    {
+        smartPointsText.text = currentPoints.ToString();
     }
 }

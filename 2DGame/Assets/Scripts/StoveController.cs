@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StoveController : MonoBehaviour
+public class StoveController : QuestObject
 {
     public GameObject pressEToUse;
     public GameObject fryingPan;
@@ -69,6 +69,7 @@ public class StoveController : MonoBehaviour
         {
             fryingPan.SetActive(true);
             isCooking = true;
+            SetInactive(false);
             animator.SetBool("stoveOn", true);
         }
     }
@@ -79,6 +80,7 @@ public class StoveController : MonoBehaviour
         {
             fryingPan.SetActive(false);
             isCooking = false;
+            SetInactive(true);
             animator.SetBool("stoveOn", false);
         }
     }
