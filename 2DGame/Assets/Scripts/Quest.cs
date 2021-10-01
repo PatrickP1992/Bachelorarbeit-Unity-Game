@@ -4,12 +4,17 @@ using UnityEngine;
 
 public struct Quest
 {
+    // The list of the Objects in the Quest
     private List<QuestObject> _questObjects;
-
+    // The Text for the Quest
     private string _questText;
+    // if the Quest has Objects
     private bool _isQuestWithObjects;
 
 
+    /**
+     * For creating a Quest with objects
+     */
     public Quest(List<QuestObject> questObjects, string questText)
     {
         this._questObjects = questObjects;
@@ -17,6 +22,9 @@ public struct Quest
         _isQuestWithObjects = true;
     }
 
+    /**
+     * For creating a Quest without objects
+     */
     public Quest(string questText)
     {
         this._questText = questText;

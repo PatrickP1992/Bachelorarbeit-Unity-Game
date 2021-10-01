@@ -6,6 +6,10 @@ public class PhoneOverlayController : MonoBehaviour
 {
     public GameObject panel;
     
+    
+    /**
+     * Close the Panel by Setting it to inactive
+     */
     public void ClosePhonePanel()
     {
         if (panel != null)
@@ -14,6 +18,9 @@ public class PhoneOverlayController : MonoBehaviour
         }
     }
     
+    /**
+     * Opens the Panel by setting it active
+     */
     public void OpenPhonePanel()
     {
         if (panel != null)
@@ -22,6 +29,9 @@ public class PhoneOverlayController : MonoBehaviour
         }
     }
 
+    /**
+     * A Methode that closes and opens the Panel depending on the current Sate of the Panel
+     */
     public void PhoneButton()
     {
         if (panel.active)
