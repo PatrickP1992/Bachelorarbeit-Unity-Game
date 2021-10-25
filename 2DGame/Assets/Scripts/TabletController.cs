@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class TabletController : MonoBehaviour
 {
-    public GameObject pressEToUse;
+   
     public GameObject tabletOverlay;
 
     private bool canBeActivated;
@@ -21,21 +21,11 @@ public class TabletController : MonoBehaviour
         }
     }
 
-    private void ShowPressE()
-    {
-        pressEToUse.SetActive(true);
-    }
-
-    private void HidePressE()
-    {
-        pressEToUse.SetActive(false);
-    }
-
+    
     private void OnTriggerEnter2D(Collider2D trigger)
     {
         if (trigger.gameObject.tag == "Player")
         { 
-            ShowPressE();
             canBeActivated = true;
         }
     }
@@ -44,7 +34,6 @@ public class TabletController : MonoBehaviour
     {
         if (trigger.gameObject.tag == "Player")
         { 
-            HidePressE();
             canBeActivated = false;
         }
     }
