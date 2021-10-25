@@ -53,7 +53,7 @@ public class ScenarioController : MonoBehaviour
 
         // Setup the Text for the Beginning Quest
         currentQuest = new Quest("Gehe zur Arbeit");
-        ShowPopupText("Gehe zur Arbeit" ,2);
+        ShowPopupText("Gehe zur Arbeit", 4);
         SetQuestInfoText("Gehe zur Arbeit");
     }
 
@@ -104,7 +104,7 @@ public class ScenarioController : MonoBehaviour
         else
         {
             currentQuest = new Quest("Gehe zur Arbeit");
-            ShowPopupText("Gehe zur Arbeit",2);
+            ShowPopupText("Gehe zur Arbeit", 2);
             SetQuestInfoText("Gehe zur Arbeit");
         }
     }
@@ -123,8 +123,10 @@ public class ScenarioController : MonoBehaviour
             points = 50;
             currentPoints = currentPoints + points;
             DisplayPoints();
-            ShowPopupText("Du hast die Quest erfolgreich abgeschlossen",2);
+            ShowPopupText("Du hast die Quest erfolgreich abgeschlossen", 3);
             SetQuestInfoText("Gehe zur Arbeit");
+            
+            //ShowPopupText("Gehe zur Arbeit",2);
         }
         else if (status>0) // if Objects are completed
         {
@@ -132,7 +134,7 @@ public class ScenarioController : MonoBehaviour
             points = status * 5;
             currentPoints = currentPoints + points;
             DisplayPoints();
-            ShowPopupText("Du hast ein Gerät ausgeschalten, es sin aber noch weitere an",2);
+            ShowPopupText("Du hast ein Gerät ausgeschalten, es sind aber noch weitere an", 3);
         }
         
     }

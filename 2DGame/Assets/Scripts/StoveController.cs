@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class StoveController : QuestObject
 {
-    public GameObject pressEToUse;
     public GameObject fryingPan;
     public bool isCooking;
     public Animator animator;
@@ -22,21 +21,11 @@ public class StoveController : QuestObject
         }
     }
 
-    private void ShowPressE()
-    {
-        pressEToUse.SetActive(true);
-    }
-
-    private void HidePressE()
-    {
-        pressEToUse.SetActive(false);
-    }
 
     private void OnTriggerEnter2D(Collider2D trigger)
     {
         if (trigger.gameObject.tag == "Player")
         { 
-            ShowPressE();
             canBeActivated = true;
         }
     }
@@ -45,7 +34,6 @@ public class StoveController : QuestObject
     {
         if (trigger.gameObject.tag == "Player")
         { 
-            HidePressE();
             canBeActivated = false;
         }
     }

@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class LightSwitchController : QuestObject
 {
-    // the object that schows the PressEToUse Graphic
-    public GameObject pressEToUse;
     // The Light Object that belongs to the Switch
     public GameObject light;
     // Contains the State of the Light
@@ -29,29 +27,13 @@ public class LightSwitchController : QuestObject
         }
     }
 
-    /**
-     * Sets the PressE Graphic active
-     */
-    private void ShowPressE()
-    {
-        pressEToUse.SetActive(true);
-    }
-
-    /**
-     * Sets the PressE Graphic inactive
-     */
-    private void HidePressE()
-    {
-        pressEToUse.SetActive(false);
-    }
+  
 
     private void OnTriggerEnter2D(Collider2D trigger)
     {
         // If the Trigger is the Player
         if (trigger.gameObject.tag == "Player")
         { 
-            // Show the PressE Graphic
-            ShowPressE();
             canBeActivated = true;
         }
     }
@@ -61,8 +43,6 @@ public class LightSwitchController : QuestObject
         // If the Trigger is the Player
         if (trigger.gameObject.tag == "Player")
         { 
-            // Hide the PressE Graphic
-            HidePressE();
             canBeActivated = false;
         }
     }
